@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead  style="font :bold ;">
+        <tr>
+            <th>Name</th>
+            <th class="text-wrap">Date of Birth</th>
+            <th>EmailId</th>        
+            <th>Skill Set</th>
+            <th>Manager</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let emp of service.employeeList">
+        <!-- <td (click)="populateForm(emp)">{{emp.EmpId}}</td> -->
+        <td (click)="populateForm(emp)">{{emp.Name}}</td>
+        <td (click)="populateForm(emp)">{{ emp.DOB | date: 'yyyy-MM-dd' }}</td>
+        <td (click)="populateForm(emp)">{{emp.EmailId}}</td>        
+        <td (click)="populateForm(emp)">{{emp.SkillSet}}</td>
+        <td (click)="populateForm(emp)">{{emp.ManagerName}}</td>
+        <td (click)="populateForm(emp)">{{emp.DeptName}}</td>
+        <td (click)="populateForm(emp)"><span class="glyphicon glyphicon-pencil"></span></td> 
+    </tr>
+</table>
